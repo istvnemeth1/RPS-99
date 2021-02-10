@@ -11,3 +11,11 @@ let playerTwoMoveThreeType;
 let playerTwoMoveOneValue;
 let playerTwoMoveTwoValue;
 let playerTwoMoveThreeValue;
+
+const setPlayerMoves = (player, moveOneType, moveOneValue, moveTwoType, moveTwoValue, moveThreeType, moveThreeValue) => {
+
+}
+
+const getRoundWinner = () => {
+    
+}
