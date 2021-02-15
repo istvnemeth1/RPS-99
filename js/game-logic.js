@@ -28,10 +28,16 @@ const setPlayerMoves = (player, moveOneType, moveOneValue, moveTwoType, moveTwoV
     if ((moveOneValue + moveTwoValue + moveThreeValue) > 99) {
         return;
     }
+}
 
-    // Helper function
+// Helper function 'isValidMoveType()' with parameter 'moveType' to validate value to 'rock', 'paper', 'scissors';
+function isValidMoveType(moveType) {
+    return (moveType === 'rock') || (moveType === 'scissors') || (moveType === 'paper');
+}
 
-
+// Helper function 'isValidMoveValue()' accepts argument of 'moveValue' and checks that it is '>= 1' and '<= 99'
+function isValidMoveValue(moveValue) {
+    return (moveValue >= 1) && (moveValue <= 99);
 }
 
 
