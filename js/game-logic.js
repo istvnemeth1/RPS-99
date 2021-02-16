@@ -69,8 +69,26 @@ const getRoundWinner = roundWinner => {
             return getMoveWinner(playerOneMoveTwoType, playerOneMoveTwoValue, playerTwoMoveTwoType, playerTwoMoveThreeValue);
         case 3:
             return getMoveWinner(playerOneMoveThreeType, playerOneMoveThreeValue, playerTwoMoveThreeType, playerTwoMoveThreeValue);
+        default:
+            return null;
     }
 
+}
+
+function getMoveWinner (playerOneMoveType, playerOneMoveValue, playerTwoMoveType, playerTwoMoveValue) {
+    if (!playerOneMoveType || !playerOneMoveValue || !playerTwoMoveType || !playerTwoMoveValue) {
+        return null;
+    }
+
+    if (playerOneMoveType === playerTwoMoveType) {
+        if (playerOneMoveValue > playerTwoMoveValue) {
+            return 'Player One';
+        } else if (playerOneMoveValue < playerTwoMoveValue) {
+            return 'Player Two';
+        } else {
+            return 'Tie';
+        }
+    }
 }
 
 const getGameWinner = () => {
