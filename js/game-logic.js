@@ -12,6 +12,8 @@ let playerTwoMoveOneValue;
 let playerTwoMoveTwoValue;
 let playerTwoMoveThreeValue;
 
+
+// Create 'setPlayerMoves()' and pass in parameters 'player, moveOneType, moveOneValue, moveTwoType, moveTwoValue, moveThreeType, moveThreeValue'
 const setPlayerMoves = (player, moveOneType, moveOneValue, moveTwoType, moveTwoValue, moveThreeType, moveThreeValue) => {
     if (!moveOneType || !moveOneValue || !moveTwoType || !moveTwoValue || !moveThreeType || !moveThreeValue) {
         return;
@@ -27,6 +29,22 @@ const setPlayerMoves = (player, moveOneType, moveOneValue, moveTwoType, moveTwoV
 
     if ((moveOneValue + moveTwoValue + moveThreeValue) > 99) {
         return;
+    }
+
+    if (player === 'Player One') {
+        playerOneMoveOneType = moveOneType;
+        playerOneMoveTwoType = moveTwoType;
+        playerOneMoveThreeType = moveThreeType;
+        playerOneMoveOneValue = moveOneValue;
+        playerOneMoveTwoValue = moveTwoValue;
+        playerOneMoveThreeValue = moveThreeValue;
+    } else if (player === 'Player Two') {
+        playerTwoMoveOneType = moveOneType;
+        playerTwoMoveTwoType = moveTwoType;
+        playerTwoMoveThreeType = moveThreeType;
+        playerTwoMoveOneValue = moveOneValue;
+        playerTwoMoveTwoValue = moveTwoValue;
+        playerTwoMoveThreeValue = moveThreeValue;
     }
 }
 
