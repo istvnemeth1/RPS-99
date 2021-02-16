@@ -60,8 +60,17 @@ function isValidMoveValue(moveValue) {
 
 
 
-const getRoundWinner = () => {
-    
+const getRoundWinner = roundWinner => {
+    // Make a switch statement to check round numbers
+    switch (roundWinner) {
+        case 1:
+            return getMoveWinner(playerOneMoveOneType, playerOneMoveOneValue, playerTwoMoveOneType, playerTwoMoveOneValue);
+        case 2:
+            return getMoveWinner(playerOneMoveTwoType, playerOneMoveTwoValue, playerTwoMoveTwoType, playerTwoMoveThreeValue);
+        case 3:
+            return getMoveWinner(playerOneMoveThreeType, playerOneMoveThreeValue, playerTwoMoveThreeType, playerTwoMoveThreeValue);
+    }
+
 }
 
 const getGameWinner = () => {
